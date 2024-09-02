@@ -2,7 +2,7 @@ from .DecisionTree import DecisionTree
 import numpy as np
 import numpy as np
 
-class RandomForestModel:
+class RandomForest:
     def __init__(self, n_trees=100, max_depth=10, min_samples_split=2, criteria='gini'):
         """
         Initializes the RandomForestModel with the specified parameters.
