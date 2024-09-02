@@ -1,16 +1,16 @@
 import numpy as np
 
 class KMeans:
-    def __init__(self, k=3, max_iters=100):
+    def __init__(self, k=3, epochs=100):
         """
         Initializes the KMeans model with the specified parameters.
 
         Parameters:
         - k: The number of clusters to form.
-        - max_iters: The maximum number of iterations for the algorithm.
+        - epochs: The maximum number of iterations for the algorithm.
         """
         self.k = k
-        self.max_iters = max_iters
+        self.epochs = epochs
         self.centroids = None
 
     def euclidean(self, x1, x2):
@@ -109,7 +109,7 @@ class KMeans:
         # Initialize centroids by randomly selecting k data points from X
         self.centroids = X[np.random.choice(X.shape[0], self.k, replace=False)]
 
-        for _ in range(self.max_iters):
+        for _ in range(self.epochs):
             # Create clusters by assigning data points to the closest centroid
             clusters = self.create_clusters(X)
 
