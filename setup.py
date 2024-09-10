@@ -7,7 +7,7 @@ with open("Description.txt", 'r') as f:
 
 setup(
     name='mltrain',
-    version='0.3.0',
+    version='0.4.0',
     packages=find_packages(),
     install_requires=[
         'numpy',
